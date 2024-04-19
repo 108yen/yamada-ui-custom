@@ -1,18 +1,26 @@
-"use client";
+"use client"
 
-import { UsageTheme, extendConfig, extendTheme } from "@yamada-ui/react";
-import components from "./components";
-import { globalStyle, resetStyle, layerStyles, textStyles } from "./styles";
-import tokens from "./tokens";
-import { customConfig } from "./config";
+import {
+  UsageTheme,
+  extendConfig,
+  extendTheme,
+  keysFormObject,
+} from "@yamada-ui/react"
+import components from "./components"
+import styles from "./styles"
+import tokens from "./tokens"
+import { customConfig } from "./config"
+import { themeSchemes } from "./semantics"
 
 export const customTheme: UsageTheme = {
-  styles: { globalStyle, resetStyle, layerStyles, textStyles },
+  styles,
   components,
+  themeSchemes,
+  colorSchemes: keysFormObject(themeSchemes),
   ...tokens,
-};
+}
 
-export const theme = extendTheme(customTheme)();
-export const config = extendConfig(customConfig);
+export const theme = extendTheme(customTheme)()
+export const config = extendConfig(customConfig)
 
-export default theme;
+export default theme
