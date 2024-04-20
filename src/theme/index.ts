@@ -1,11 +1,6 @@
 "use client"
 
-import {
-  UsageTheme,
-  extendConfig,
-  extendTheme,
-  keysFormObject,
-} from "@yamada-ui/react"
+import { UsageTheme, extendConfig, extendTheme } from "@yamada-ui/react"
 import components from "./components"
 import styles from "./styles"
 import tokens from "./tokens"
@@ -16,7 +11,6 @@ export const customTheme: UsageTheme = {
   styles,
   components,
   themeSchemes,
-  colorSchemes: keysFormObject(themeSchemes),
   ...tokens,
 }
 

@@ -26,6 +26,7 @@ import {
   CenterProps,
   useScroll,
   useMotionValueEvent,
+  keysFormObject,
 } from "@yamada-ui/react"
 import Link from "next/link"
 import { ColorPalette, Moon, Sun } from "../media-and-icons"
@@ -154,7 +155,8 @@ const ThemeSchemeButton: FC<ThemeSchemeButtonProps> = memo(
   ({ popoverProps, ...rest }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { theme, changeThemeScheme } = useTheme()
-    const { colorSchemes = [] } = theme
+    const { themeSchemes = {} } = theme
+    const colorSchemes = keysFormObject(themeSchemes)
 
     return (
       <Popover
