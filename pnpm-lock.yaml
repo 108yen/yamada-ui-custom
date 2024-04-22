@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^18
     version: 18.2.25
   '@yamada-ui/cli':
-    specifier: ^1.0.4
-    version: 1.0.4
+    specifier: ^1.0.5
+    version: 1.0.5
   eslint:
     specifier: ^8
     version: 8.57.0
@@ -910,8 +910,8 @@ packages:
       - react-dom
     dev: false
 
-  /@yamada-ui/cli@1.0.4:
-    resolution: {integrity: sha512-NQI3uCuCDKCB6W8h2g8IZuGEZaFnhD006K1evcnXVq3h7gGxKwKPPDjPMvKBhR8shWKtPj/ZhiQv27KglsUIOg==}
+  /@yamada-ui/cli@1.0.5:
+    resolution: {integrity: sha512-2p3WUSOeufA7PM74KDBZO57diR4mGfJOI6TSaYzuxu2Y62K9zPJGe8itWtbDjOpD7zZHbGwwIZI+TpMPDRIVqA==}
     hasBin: true
     dependencies:
       '@clack/prompts': 0.7.0
@@ -4594,7 +4594,7 @@ packages:
     peerDependencies:
       '@babel/core': '*'
       babel-plugin-macros: '*'
-      react: ^18.2.0
+      react: '>= 16.8.0 || 17.x.x || ^18.0.0-0'
     peerDependenciesMeta:
       '@babel/core':
         optional: true
