@@ -156,7 +156,7 @@ const ThemeSchemeButton: FC<ThemeSchemeButtonProps> = memo(
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { theme, changeThemeScheme } = useTheme()
     const { themeSchemes = {} } = theme
-    const colorSchemes = keysFormObject(themeSchemes)
+    const colorSchemes = keysFormObject(themeSchemes).map(String)
 
     return (
       <Popover
