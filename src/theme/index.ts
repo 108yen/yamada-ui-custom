@@ -16,5 +16,3 @@ export const customTheme: UsageTheme = {
 
 export const theme = extendTheme(customTheme)()
 export const config = extendConfig(customConfig)
-
-export default theme

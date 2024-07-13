@@ -1,10 +1,11 @@
-import theme, { config } from "@/theme"
+import { theme, config } from "@/theme"
 import {
   ColorModeScript,
   ThemeSchemeScript,
   UIProvider,
 } from "@yamada-ui/react"
 import type { Metadata } from "next"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "Next.js App - Yamada UI",
@@ -25,8 +26,10 @@ export default function RootLayout({
       </head>
 
       <body>
-        <ThemeSchemeScript initialThemeScheme={initialThemeScheme} />
-        <ColorModeScript initialColorMode={initialColorMode} />
+        <Script id="yamada-ui-custom">
+          <ThemeSchemeScript initialThemeScheme={initialThemeScheme} />
+          <ColorModeScript initialColorMode={initialColorMode} />
+        </Script>
         <UIProvider config={config} theme={theme}>
           {children}
         </UIProvider>
