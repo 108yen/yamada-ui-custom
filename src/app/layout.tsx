@@ -1,8 +1,6 @@
 import { theme, config } from "@/theme"
 import { YamadaUIScripts } from "@/utils/yamada-ui-scripts"
-import {
-  UIProvider,
-} from "@yamada-ui/react"
+import { UIProvider } from "@yamada-ui/react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -16,14 +14,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" data-mode="light">
+    <html lang="ja" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" />
       </head>
 
-      <body>
+      <body suppressHydrationWarning>
         <YamadaUIScripts />
-        
+
         <UIProvider config={config} theme={theme}>
           {children}
         </UIProvider>
