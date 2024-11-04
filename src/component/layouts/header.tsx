@@ -35,7 +35,7 @@ import { FC, memo, useRef, useState } from "react"
 export type HeaderProps = CenterProps
 
 export const Header: FC<HeaderProps> = ({ ...rest }) => {
-  const ref = useRef<HTMLHeadingElement>()
+  const ref = useRef<HTMLHeadingElement>(undefined)
   const { scrollY } = useScroll()
   const [y, setY] = useState<number>(0)
   const { height = 0 } = ref.current?.getBoundingClientRect() ?? {}
