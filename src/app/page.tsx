@@ -1,6 +1,12 @@
 "use client"
 import { Header } from "@/component/layouts/header"
-import { Button, Center, Container, Heading, useTheme } from "@yamada-ui/react"
+import {
+  Button,
+  Center,
+  Container,
+  Heading,
+  useTheme,
+} from "@yamada-ui/react"
 
 export default function Home() {
   const { changeThemeScheme } = useTheme()
