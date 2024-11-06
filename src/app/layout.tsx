@@ -14,14 +14,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" suppressHydrationWarning>
+    <html lang="ja">
       <head>
         <link rel="icon" href="/favicon.svg" />
       </head>
 
-      <body suppressHydrationWarning>
+      <body>
         <YamadaUIScripts />
-
+        
         <UIProvider config={config} theme={theme}>
           {children}
         </UIProvider>
