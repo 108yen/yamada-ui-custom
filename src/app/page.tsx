@@ -5,6 +5,7 @@ import {
   Center,
   Container,
   Heading,
+  Tooltip,
   useTheme,
 } from "@yamada-ui/react"
 
@@ -16,14 +17,16 @@ export default function Home() {
       <Header />
       <Center>
         <Container size="sm" variant="with-border-dotted" layerStyle="serie">
-          <Button
-            colorScheme="frieren"
-            onClick={() => {
-              changeThemeScheme("frieren")
-            }}
-          >
-            frieren
-          </Button>
+          <Tooltip label="frieren">
+            <Button
+              colorScheme="frieren"
+              onClick={() => {
+                changeThemeScheme("frieren")
+              }}
+            >
+              frieren
+            </Button>
+          </Tooltip>
           <Button
             colorScheme="fern"
             onClick={() => {
